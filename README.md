@@ -171,10 +171,8 @@ Add the configuration that was printed out by either `export-local` or `package-
       dynamicPlugins:
         frontend:
           immobiliarelabs-backstage-plugin-ldap-auth:
-            components:
-              - name: SignInPage
-                module: PluginRoot
-                importName: SignInPage
+            signInPage:
+              importName: SignInPage
   - package: ./local-plugins/immobiliarelabs-backstage-plugin-ldap-auth-backend-dynamic
     disabled: false
     pluginConfig:
@@ -213,3 +211,7 @@ After logging in, click on "Settings" in the side-navigation and note that the c
 ![Screenshot of a web page titled "Settings" which contains among other things a box entitled "Profile" with the name "johndoe"](./screenshots/logged-in.png)
 
 ![Screenshot of a web page titled "johndoe" which has several boxes containing information about the johndoe user](./screenshots/user-page.png)
+
+## But nothing is listed under Authentication Providers in the settings!
+
+There is no `providerSettings` configuration for this example which is normally used to add entries to the "Settings" -> "Authentication Providers" page.  This is because the frontend plugin does not implement or export the necessary API factory to connect the button which initiates sign-in/sign-out.  It should be possible to add such functionality either in this wrapper or the original plugin, so perhaps a future update will add this functionality.
