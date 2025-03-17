@@ -62,7 +62,7 @@ yarn export-local
 
 Use the environment variable `DYNAMIC_PLUGINS_ROOT` to change the output directory to the `local-plugins` directory of `rhdh-local`.
 
-## Running the Example
+## Running the Example in rhdh-local
 
 Download the example configuration for glauth from [here](https://gist.github.com/gashcrumb/37379e5d6384d236fd1b3af0dd42a9c6) as `sample-simple.cfg` and run `glauth`:
 
@@ -193,7 +193,7 @@ Add the configuration that was printed out by either `export-local` or `package-
 
 Finally start up `rhdh-local`.  Once the dynamic plugins have been installed and the application is started, access the application at [http://localhost:7007](http://localhost:7007), or at the appropriate location where `rhdh-local` is running.
 
-## Navigating the running example
+### Navigating the running example
 
 Accessing the Developer Hub instance at [http://localhost:7007](http://localhost:7007) should lead to the LDAP login page
 
@@ -212,6 +212,209 @@ After logging in, click on "Settings" in the side-navigation and note that the c
 
 ![Screenshot of a web page titled "johndoe" which has several boxes containing information about the johndoe user](./screenshots/user-page.png)
 
-## But nothing is listed under Authentication Providers in the settings!
+## But nothing is listed under Authentication Providers in the settings
 
-There is no `providerSettings` configuration for this example which is normally used to add entries to the "Settings" -> "Authentication Providers" page.  This is because the frontend plugin does not implement or export the necessary API factory to connect the button which initiates sign-in/sign-out.  It should be possible to add such functionality either in this wrapper or the original plugin, so perhaps a future update will add this functionality.
+There is no `providerSettings` configuration for this example which is normally used to add entries to the "Settings" -> "Authentication Providers" page.  This is because the frontend plugin does not implement or export the necessary API factory to connect the button which initiates sign-in/sign-out.  However it's possible to add additional authentication providers to Developer Hub as well, these authentication providers will be available on this tab.  As an example, a github authentication provider can be added via a dynamic plugin and the following configuration:
+
+```yaml
+      - disabled: false
+        package: >-
+          oci://quay.io/gashcrumb/custom-authentication-module-example:latest!github-auth-provider-wrapper-dynamic
+        pluginConfig:
+          auth:
+            environment: development
+            providers:
+              github:
+                development:
+                  clientId: '${GITHUB_CLIENT_ID}'
+                  clientSecret: '${GITHUB_CLIENT_SECRET}'
+```
+
+## Running the example on OpenShift
+
+To deploy this example to OpenShift, first a glauth server will be configured and started, and then Developer Hub will be deployed using Helm.  Also, a github authentication provider will be added to allow for a more real-world use case, where login is provided by LDAP and source control access is authorized by GitHub.  Deploying this example to a cluster requires that the example has been built and pushed to an image registry that your cluster has access to.  A prebuilt copy of this example is available [here](https://quay.io/repository/gashcrumb/custom-authentication-module-example).
+
+For this simple example everything is deployed to the same namespace, so first off from a terminal with a logged in with `oc` create that:
+
+```bash
+oc new-project ldap-provider-example
+```
+
+### Deploying glauth
+
+Use the provider `01-deploy-glauth.sh` script to start up glauth:
+
+```bash
+./01-deploy-glauth.sh
+```
+
+The output should look something like:
+
+```text
+configmap/glauth-config created
+deployment.apps/glauth-app created
+service/glauth-app exposed
+```
+
+And the output of the glauth-app deployment's pod should look like:
+
+```text
+<nil> map[employeenumber:[12345 54321] employeetype:[Intern Temp]]
+Mon, 17 Mar 2025 13:08:15 +0000 INF Debugging enabled
+Mon, 17 Mar 2025 13:08:15 +0000 INF AP start
+Mon, 17 Mar 2025 13:08:15 +0000 INF Web API enabled
+Mon, 17 Mar 2025 13:08:15 +0000 INF Loading backend datastore=config position=0
+Mon, 17 Mar 2025 13:08:15 +0000 INF LDAP server listening address=0.0.0.0:3893
+Mon, 17 Mar 2025 13:08:15 +0000 INF Starting HTTP server address=0.0.0.0:5555
+Mon, 17 Mar 2025 13:08:30 +0000 DBG Tick value=2025-03-17T13:08:30Z
+```
+
+### Deploying Developer Hub
+
+## Create the rhdh-secrets secret
+
+From the OpenShift console Developer perspective, ensure that `ldap-provider-example` is the current namespace, then click on "Secrets" in the main navigation, "Create" at the top-right of the page and select "Key/value secret".  Name the secret `rhdh-secrets` and add the following keys and values:
+
+```text
+ENABLE_AUTH_PROVIDER_MODULE_OVERRIDE=true
+GITHUB_CLIENT_ID=<paste your client ID or use a dummy value>
+GITHUB_CLIENT_SECRET=<paste your client secret or use a dummy value>
+LDAP_BIND_DN=cn=serviceuser,ou=svcaccts,dc=glauth,dc=com
+LDAP_BIND_PASSWORD=mysecret
+LDAP_URL=ldap://glauth-app:3893
+```
+
+## Deploy the Helm Chart
+
+From the OpenShift console Developer perspective, ensure that `ldap-provider-example` is the current namespace, then click on "Helm" in the main navigation, "Create" at the top-right of the page and select "Helm Release".  Type "Developer Hub" in the search input, and select "Red Hat Developer Hub".  Finally, click "Create" on the detail pop-out to get into the Helm deployment page.
+
+Update `global.clusterRouterBase` to match your cluster's DNS domain
+
+Update `global.dynamic.plugins` with the following configuration.  If you've built your own copy of the example and deployed it to a registry server, update the plugin URLs as necessary:
+
+```yaml
+      - disabled: false
+        package: >-
+          ./dynamic-plugins/dist/backstage-plugin-catalog-backend-module-ldap-dynamic
+        pluginConfig:
+          catalog:
+            providers:
+              ldapOrg:
+                default:
+                  bind:
+                    dn: '${LDAP_BIND_DN}'
+                    secret: '${LDAP_BIND_PASSWORD}'
+                  groups:
+                    - dn: 'ou=groups,dc=glauth,dc=com'
+                      map:
+                        description: description
+                        displayName: cn
+                        email: '<nothing, left out>'
+                        memberOf: memberOf
+                        members: member
+                        name: cn
+                        picture: '<nothing, left out>'
+                        type: groupType
+                      options:
+                        attributes:
+                          - '*'
+                          - +
+                        filter: (gidNumber=*)
+                        paged: false
+                        scope: sub
+                  schedule:
+                    frequency: PT1M
+                    timeout: PT1M
+                  target: '${LDAP_URL}'
+                  users:
+                    - dn: 'ou=users,dc=glauth,dc=com'
+                      map:
+                        description: description
+                        displayName: uid
+                        email: mail
+                        memberOf: memberOf
+                        name: uid
+                        picture: '<nothing, left out>'
+                        rdn: uid
+                      options:
+                        attributes:
+                          - '*'
+                          - +
+                        filter: (accountStatus=active)
+                        paged: false
+                        scope: sub
+            rules:
+              - allow:
+                  - Component
+                  - System
+                  - Group
+                  - Resource
+                  - Location
+                  - Template
+                  - API
+                  - User
+          permission:
+            enabled: false
+      - disabled: false
+        package: >-
+          oci://quay.io/gashcrumb/custom-authentication-module-example:latest!github-auth-provider-wrapper-dynamic
+        pluginConfig:
+          auth:
+            environment: development
+            providers:
+              github:
+                development:
+                  clientId: '${GITHUB_CLIENT_ID}'
+                  clientSecret: '${GITHUB_CLIENT_SECRET}'
+      - disabled: false
+        package: >-
+          oci://quay.io/gashcrumb/custom-authentication-module-example:latest!immobiliarelabs-backstage-plugin-ldap-auth
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              immobiliarelabs-backstage-plugin-ldap-auth:
+                signInPage:
+                  importName: SignInPage
+      - disabled: false
+        package: >-
+          oci://quay.io/gashcrumb/custom-authentication-module-example:latest!immobiliarelabs-backstage-plugin-ldap-auth-backend-dynamic
+        pluginConfig:
+          auth:
+            environment: development
+            providers:
+              ldap:
+                development:
+                  ldapAuthenticationOptions:
+                    adminDn: '${LDAP_BIND_DN}'
+                    adminPassword: '${LDAP_BIND_PASSWORD}'
+                    ldapOpts:
+                      url:
+                        - '${LDAP_URL}'
+                    userSearchBase: 'ou=users,dc=glauth,dc=com'
+                    usernameAttribute: uid
+```
+
+Add `upstream.backstage.ExtraEnvVarsSecrets` to the helm config:
+
+```yaml
+    extraEnvVarsSecrets:
+      - rhdh-secrets
+```
+
+This setup requires at least Developer Hub 1.5, if needed, update `upstream.backstage.image` to use an image that contains this version, for example:
+
+```yaml
+    image:
+      pullPolicy: Always
+      registry: quay.io
+      repository: rhdh/rhdh-hub-rhel9
+      tag: '1.5'
+```
+
+After saving, Developer Hub will be deployed and visible in the OpenShift console Topology View alongside glauth:
+
+![Screenshot of a web page title Topology with some boxes and circles on it](./screenshots/topology-view.png)
+
+Click on the "Open URL" icon hanging off of the redhat-developer-hub deployment to open a tab to Developer Hub.  The steps mentioned previously in ["Navigating the Running Example"](#navigating-the-running-example) are still appropriate.  Additionally if you've configured credentials for GitHub, navigate to the "Settings" section of the app.  It should be possible to log into the GitHub authentication provider, for example:
+
+![Screenshot of a web page title Settings with a box titled GitHub and ](./screenshots/github-signin.png)

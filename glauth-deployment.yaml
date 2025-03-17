@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: glauth-app
+  name: glauth-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: glauth-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: glauth-app
+    spec:
+      containers:
+      - image: docker.io/glauth/glauth
+        name: glauth
+        command:
+         - '/app/glauth'
+        args:
+         - '--ldap'
+         - 0.0.0.0:3893
+         - '-c'
+         - '/app/config/sample-simple.cfg'
+        ports:
+        - containerPort: 3893
+        - containerPort: 5555
+        volumeMounts:
+          - name: glauth-config
+            mountPath: /app/config
+        resources: {}
+      volumes:
+        - name: glauth-config
+          configMap:
+            name: glauth-config
+            items:
+              - key: sample-simple
+                path: sample-simple.cfg
+
