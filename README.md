@@ -271,7 +271,7 @@ Mon, 17 Mar 2025 13:08:30 +0000 DBG Tick value=2025-03-17T13:08:30Z
 
 ### Deploying Developer Hub
 
-## Create the rhdh-secrets secret
+#### Create the rhdh-secrets secret
 
 From the OpenShift console Developer perspective, ensure that `ldap-provider-example` is the current namespace, then click on "Secrets" in the main navigation, "Create" at the top-right of the page and select "Key/value secret".  Name the secret `rhdh-secrets` and add the following keys and values:
 
@@ -284,7 +284,7 @@ LDAP_BIND_PASSWORD=mysecret
 LDAP_URL=ldap://glauth-app:3893
 ```
 
-## Deploy the Helm Chart
+#### Deploy the Helm Chart
 
 From the OpenShift console Developer perspective, ensure that `ldap-provider-example` is the current namespace, then click on "Helm" in the main navigation, "Create" at the top-right of the page and select "Helm Release".  Type "Developer Hub" in the search input, and select "Red Hat Developer Hub".  Finally, click "Create" on the detail pop-out to get into the Helm deployment page.
 
