@@ -132,16 +132,14 @@ plugins:
                     attributes: ['*', '+']
                     paged: false
                   map:
-                    rdn: uid
-                    name: uid
-                    uid: uid
-                    displayName: uid
                     description: description
-                    type: groupType
-                    email: <nothing, left out>
-                    picture: <nothing, left out>
+                    displayName: cn
+                    email: '<nothing, left out>'
                     memberOf: memberOf
                     members: member
+                    name: cn
+                    picture: '<nothing, left out>'
+                    type: groupType
               schedule:
                 frequency: PT10M
                 timeout: PT10M
