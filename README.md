@@ -15,20 +15,24 @@ To build and run the example locally the following will be needed:
 
 ## About the example
 
-This example consists of two wrapper projects for some existing LDAP authentication provider plugins:
+This example consists of wrapper projects for some existing LDAP authentication provider plugins:
 
 - [backstage-plugin-ldap-auth-backend](https://github.com/immobiliare/backstage-plugin-ldap-auth/tree/main/packages/ldap-auth-backend) - provides an authentication provider API and bridges authentication to an LDAP server.
 - [backstage-plugin-ldap-auth](https://github.com/immobiliare/backstage-plugin-ldap-auth/tree/main/packages/ldap-auth) - Provides a custom SignInPage as well as API client for the backend authentication provider service.
 
 which work in conjunction with the [LDAP catalog provider](https://github.com/backstage/backstage/tree/master/plugins/catalog-backend-module-ldap) backend module which synchronizes an LDAP to users and groups in the Backstage catalog.
 
-The example brings these three modules together as dynamic plugins in Developer Hub using [rhdh-local](https://github.com/redhat-developer/rhdh-local), as Developer Hub already includes the LDAP catalog provider.
+The example brings these modules together as dynamic plugins in Developer Hub using [rhdh-local](https://github.com/redhat-developer/rhdh-local), as Developer Hub already includes the LDAP catalog provider.
+
+The optional GitHub authentication provider wrapper can be used to add support for authenticating against GitHub for using software templates or accessing other project resources that may be part of a GitHub organization.
 
 ### About the wrapper code
 
 The [backend wrapper](plugins/immobiliarelabs-backstage-plugin-ldap-auth-backend/) simply re-exports the original plugin's default module.  It also includes the [example backend configuration](./plugins/immobiliarelabs-backstage-plugin-ldap-auth-backend/app-config.yaml).
 
 The [frontend wrapper](plugins/immobiliarelabs-backstage-plugin-ldap-auth/) also re-exports all of the modules from the original plugin, however it also includes a [custom SignInPage wrapper](./plugins/immobiliarelabs-backstage-plugin-ldap-auth/src/components/SignInPage/SignInPage.tsx).  The `SignInPage` component is the place in a Backstage app where the frontend API reference is connected to the appropriate backend authentication provider API service.  For this example the exported `SignInPage` component simply delegates to the `LDAPSignInPage` component that is provided by the [backstage-plugin-ldap-auth](https://github.com/immobiliare/backstage-plugin-ldap-auth/tree/main/packages/ldap-auth) package.
+
+The [GitHub authentication provider wrapper](plugins/github-auth-provider-wrapper/) also simply re-exports the original plugin's default module.  Configuration for this module is mentioned in [this section](#but-nothing-is-listed-under-authentication-providers-in-the-settings).
 
 ## Building the Example
 
