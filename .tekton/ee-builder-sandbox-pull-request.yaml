@@ -197,6 +197,33 @@ spec:
         workspace: git-auth
       - name: netrc
         workspace: netrc
+    - name: run-ansible-builder
+      params:
+        - name: ociStorage
+          value: $(params.output-image).script
+        - name: ociArtifactExpiresAfter
+          value: $(params.image-expires-after)
+        - name: SCRIPT_RUNNER_IMAGE
+          value: ghcr.io/ansible/community-ansible-dev-tools:latest
+        - name: SCRIPT_ARTIFACT_RELATIVE_PATH
+          value: context
+        - name: SCRIPT
+          value: ansible-builder create
+        - name: HERMETIC
+          value: $(params.hermetic)
+        - name: SOURCE_ARTIFACT
+          value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+      runAfter:
+      - prefetch-dependencies
+      taskRef:
+        resolver: "git"
+        params:
+          - name: url
+            value: https://github.com/Zokormazo/oss-na-2025-demo.git
+          - name: revision
+            value: '{{ revision }}'
+          - name: pathInRepo
+            value: .tekton/task/run-script-oci-ta.yaml
     - name: build-container
       params:
       - name: IMAGE
@@ -221,11 +248,11 @@ spec:
       - name: PRIVILEGED_NESTED
         value: $(params.privileged-nested)
       - name: SOURCE_ARTIFACT
-        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+        value: $(tasks.run-ansible-builder.results.SCRIPT_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
       runAfter:
-      - prefetch-dependencies
+      - run-ansible-builder
       taskRef:
         params:
         - name: name
@@ -553,7 +580,7 @@ spec:
       - name: CONTEXT
         value: $(params.path-context)
       - name: SOURCE_ARTIFACT
-        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+        value: $(tasks.run-ansible-builder.results.SCRIPT_ARTIFACT)
       runAfter:
       - build-image-index
       taskRef:
