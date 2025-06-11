@@ -1,0 +1,14 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: ee-static-containerfile
+spec:
+  application: oss-na-2025-demo
+  componentName: ee-static-containerfile
+  resources: {}
+  source:
+    git:
+      dockerfileUrl: ./Containerfile
+      revision: ee-static-containerfile
+      url: https://github.com/Zokormazo/oss-na-2025-demo.git
