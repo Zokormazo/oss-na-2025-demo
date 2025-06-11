@@ -1,0 +1,7 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Application
+metadata:
+  name: oss-na-2025-demo
+spec:
+  displayName: oss-na-2025-demo
