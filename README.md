@@ -8,7 +8,7 @@ This repository contains the examples used for the demos on these talks:
 ## Components
 
 
-| Component | Description | Conforma | Pull Request |
+| Component | Description | Pull Request | Conforma |
 | --------- | ----------- | -------- | ------------ |
 | [ee-static-containerfile](https://github.com/Zokormazo/oss-na-2025-demo/tree/ee-static-containerfile) | [Ansible Execution Environment](https://docs.ansible.com/ansible/latest/getting_started_ee/index.html) with static Container build context | [#1](https://github.com/Zokormazo/oss-na-2025-demo/pull/1) | [✅](https://github.com/Zokormazo/oss-na-2025-demo/pull/1/checks?check_run_id=43872122263) |
 | [ee-builder-sandbox](https://github.com/Zokormazo/oss-na-2025-demo/tree/ee-builder-sandbox) | [Ansible Execution Environment](https://docs.ansible.com/ansible/latest/getting_started_ee/index.html) using [ansible-builder](https://ansible.readthedocs.io/projects/builder/en/latest/) and a custom sandbox task. | [#3](https://github.com/Zokormazo/oss-na-2025-demo/pull/3) | [❌](https://github.com/Zokormazo/oss-na-2025-demo/pull/3/checks?check_run_id=43873950643) |
