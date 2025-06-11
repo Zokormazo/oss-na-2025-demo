@@ -1,0 +1,14 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: ee-builder-sandbox
+spec:
+  application: oss-na-2025-demo
+  componentName: ee-builder-sandbox
+  resources: {}
+  source:
+    git:
+      dockerfileUrl: ./Containerfile
+      revision: ee-builder-sandbox
+      url: https://github.com/Zokormazo/oss-na-2025-demo.git
