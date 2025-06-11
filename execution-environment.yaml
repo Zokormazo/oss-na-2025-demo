@@ -1,0 +1,13 @@
+---
+version: 3
+dependencies:
+  python_interpreter:
+    python_path: /usr/bin/python3
+  galaxy: requirements.yaml
+
+images:
+  base_image:
+    name: ghcr.io/ansible-community/community-ee-minimal:2.18.5-1
+
+options:
+  container_init: {}
