@@ -246,7 +246,7 @@ spec:
       - name: PRIVILEGED_NESTED
         value: $(params.privileged-nested)
       - name: SOURCE_ARTIFACT
-        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+        value: $(tasks.make.results.SCRIPT_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
       runAfter:
@@ -299,7 +299,7 @@ spec:
       - name: BINARY_IMAGE
         value: $(params.output-image)
       - name: SOURCE_ARTIFACT
-        value: $(tasks.make.results.SCRIPT_ARTIFACT)
+        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
       runAfter:
