@@ -12,4 +12,4 @@ This repository contains the examples used for the demos on these talks:
 - `ee-builder-sandbox`: [Ansible Execution Environment](https://docs.ansible.com/ansible/latest/getting_started_ee/index.html) using [ansible-builder](https://ansible.readthedocs.io/projects/builder/en/latest/) and a custom sandbox task.
 - `ee-builder-trusted`: [Ansible Execution Environment](https://docs.ansible.com/ansible/latest/getting_started_ee/index.html) using [ansible-builder](https://ansible.readthedocs.io/projects/builder/en/latest/) and a [Trusted Task](https://conforma.dev/docs/policy/trusted_tasks.html)
 - `rhdh-dynamic-plugins`: [RHDH Dynamic Plugins](https://github.com/redhat-developer/rhdh/blob/main/docs/dynamic-plugins/index.md) using a [Trusted Task](https://conforma.dev/docs/policy/trusted_tasks.html).
-- `make-containerfile`: Example repo using a [make](https://www.gnu.org/software/make/manual/make.html) target to generate the Containerfile.
+- `make-containerfile`: Example component using a [make](https://www.gnu.org/software/make/manual/make.html) target to generate the `Containerfile` using a [Trusted Task](https://conforma.dev/docs/policy/trusted_tasks.html).
