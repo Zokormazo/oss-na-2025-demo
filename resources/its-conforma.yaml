@@ -10,6 +10,8 @@ metadata:
 spec:
   application: oss-na-2025-demo
   params:
+    - name: SINGLE_COMPONENT
+      value: "true"
   resolverRef:
     params:
       - name: url
