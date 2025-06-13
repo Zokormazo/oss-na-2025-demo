@@ -1,0 +1,523 @@
+---
+lockfileVersion: 1
+lockfileVendor: redhat
+arches:
+- arch: aarch64
+  packages:
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/b/binutils-2.44-3.fc42.aarch64.rpm
+    repoid: fedora
+    size: 6470416
+    checksum: sha256:13d6e5c3c7dbdf12fa49f9b39074fb0c8cfbcf3e60d3d1f31e4085e90c397937
+    name: binutils
+    evr: 2.44-3.fc42
+    sourcerpm: binutils-2.44-3.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/e/expat-2.7.1-1.fc42.aarch64.rpm
+    repoid: fedora
+    size: 114785
+    checksum: sha256:0da154ef16bc01bcc255812b7328a1f9e948c8fe5e99cb84c61200657d2f66a1
+    name: expat
+    evr: 2.7.1-1.fc42
+    sourcerpm: expat-2.7.1-1.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/j/jansson-2.14-2.fc42.aarch64.rpm
+    repoid: fedora
+    size: 47910
+    checksum: sha256:ef2fbbd4d9c73bc969e85689fd2b1a19fc21fe8b1932e4f789bc1b67c36dca54
+    name: jansson
+    evr: 2.14-2.fc42
+    sourcerpm: jansson-2.14-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libb2-0.98.1-13.fc42.aarch64.rpm
+    repoid: fedora
+    size: 26583
+    checksum: sha256:e854b12eb9c94ecb84b35c1272ebdd87b675033c78d687c30f28fb67299745e7
+    name: libb2
+    evr: 0.98.1-13.fc42
+    sourcerpm: libb2-0.98.1-13.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libedit-3.1-55.20250104cvs.fc42.aarch64.rpm
+    repoid: fedora
+    size: 107319
+    checksum: sha256:2821dcc4fb4df8ce9fd7061072fe3e0ffe327c25b482c8b699d56ebb28d3efeb
+    name: libedit
+    evr: 3.1-55.20250104cvs.fc42
+    sourcerpm: libedit-3.1-55.20250104cvs.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libffi-devel-3.4.6-5.fc42.aarch64.rpm
+    repoid: fedora
+    size: 28471
+    checksum: sha256:76a608b849673440efec3ca13fd8c2ea8eed08f4908ab1707cd6f1757511fb1e
+    name: libffi-devel
+    evr: 3.4.6-5.fc42
+    sourcerpm: libffi-3.4.6-5.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libgit2-1.9.0-4.fc42.aarch64.rpm
+    repoid: fedora
+    size: 572937
+    checksum: sha256:ac45d3ce2d4e77022eff4cf502c5188877feec0f2effe3e992e141753343b53d
+    name: libgit2
+    evr: 1.9.0-4.fc42
+    sourcerpm: libgit2-1.9.0-4.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libmpc-1.3.1-7.fc42.aarch64.rpm
+    repoid: fedora
+    size: 73053
+    checksum: sha256:51940f125f3dca505051490141a645112d7bb72abe17681f173f3edcebb71886
+    name: libmpc
+    evr: 1.3.1-7.fc42
+    sourcerpm: libmpc-1.3.1-7.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libpkgconf-2.3.0-2.fc42.aarch64.rpm
+    repoid: fedora
+    size: 39130
+    checksum: sha256:89f0f459882dd14e3b4059a653f26eaddbf8b5ac34ae6f869798197afe17ec56
+    name: libpkgconf
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/libssh2-1.11.1-3.fc42.aarch64.rpm
+    repoid: fedora
+    size: 145922
+    checksum: sha256:756a3a7a9ffa1906c10e5d0959705735f0424848ad320df2023c2023667a43a1
+    name: libssh2
+    evr: 1.11.1-3.fc42
+    sourcerpm: libssh2-1.11.1-3.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/l/llhttp-9.2.1-5.fc42.aarch64.rpm
+    repoid: fedora
+    size: 33063
+    checksum: sha256:15c7a96f100279a2b3d02a13ea97d0def47f9b5629912804582ef4229ad16949
+    name: llhttp
+    evr: 9.2.1-5.fc42
+    sourcerpm: llhttp-9.2.1-5.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/m/make-4.4.1-10.fc42.aarch64.rpm
+    repoid: fedora
+    size: 598693
+    checksum: sha256:a96c948b40c1cd1546f62156cf4f1ad36bce54f6fd970b617eddb5317b72c92e
+    name: make
+    evr: 1:4.4.1-10.fc42
+    sourcerpm: make-4.4.1-10.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/m/mpfr-4.2.2-1.fc42.aarch64.rpm
+    repoid: fedora
+    size: 330038
+    checksum: sha256:e5277bf2d5e9324fdb9844581b4869d120d0046507340b434e381fe868ee50c1
+    name: mpfr
+    evr: 4.2.2-1.fc42
+    sourcerpm: mpfr-4.2.2-1.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/o/openssl-devel-3.2.4-3.fc42.aarch64.rpm
+    repoid: fedora
+    size: 2949397
+    checksum: sha256:c6a3a80ec3b38d7a23f8500f7fd6f9195f09a469cd88f08600afc789d3cfca94
+    name: openssl-devel
+    evr: 1:3.2.4-3.fc42
+    sourcerpm: openssl-3.2.4-3.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/p/pkgconf-2.3.0-2.fc42.aarch64.rpm
+    repoid: fedora
+    size: 45768
+    checksum: sha256:a0acf81c436ac7d55bba1441e3577f99bbe25d624fbb74e40b704a14f7965fa9
+    name: pkgconf
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/p/pkgconf-m4-2.3.0-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 14577
+    checksum: sha256:90496b0e2a7291473e34bd6e3044eb7b664944ffdccd1041896445196f3d32c4
+    name: pkgconf-m4
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/p/pkgconf-pkg-config-2.3.0-2.fc42.aarch64.rpm
+    repoid: fedora
+    size: 10134
+    checksum: sha256:0868cedb9603e9dba9b097ea6137215e0a8a8c50b83d6756a642ea4816393347
+    name: pkgconf-pkg-config
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/p/python-pip-wheel-24.3.1-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 1262714
+    checksum: sha256:6270a48e0b5b0fd8e5d434cba01fad2a454053d2d229b86acbff85a8a4abf093
+    name: python-pip-wheel
+    evr: 24.3.1-2.fc42
+    sourcerpm: python-pip-24.3.1-2.fc42.src.rpm
+  - url: http://ftp.tudelft.nl/download.fedora.redhat.com/linux/releases/42/Everything/aarch64/os/Packages/p/python3-pip-24.3.1-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 2854770
+    checksum: sha256:1ed6bd329ad7fb7c758ea93dc001180e66ed31faadc6645f121ba0d1b556b4ed
+    name: python3-pip
+    evr: 24.3.1-2.fc42
+    sourcerpm: python-pip-24.3.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/c/cargo-1.87.0-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 6397508
+    checksum: sha256:7345ddea720c486173a217274d6f2ba606e83b8635505f8312c82cd83911a5e6
+    name: cargo
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/c/cpp-15.1.1-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 12288965
+    checksum: sha256:6b1e290e16f1645ee6083ce1f4191d33f4ff8e4e01f1c843e9421faa12eea7df
+    name: cpp
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/e/elfutils-debuginfod-client-0.193-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 47494
+    checksum: sha256:2557bb6d6ec434e44b2b99c2fbd1b491d1f6a9e1b04fb8032aa433d95ce98345
+    name: elfutils-debuginfod-client
+    evr: 0.193-2.fc42
+    sourcerpm: elfutils-0.193-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/g/gcc-15.1.1-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 37821594
+    checksum: sha256:d1aa4698e8d6e08a3e36335651cff5c0fa49fc68ae8caa1a2e99ed4e23d0c78c
+    name: gcc
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/g/glibc-devel-2.41-5.fc42.aarch64.rpm
+    repoid: updates
+    size: 647623
+    checksum: sha256:76f2882f05b14a9ed00d67bca87bac4310da927ca164bd4b7318505d95d44009
+    name: glibc-devel
+    evr: 2.41-5.fc42
+    sourcerpm: glibc-2.41-5.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/k/kernel-headers-6.14.3-300.fc42.aarch64.rpm
+    repoid: updates
+    size: 1704364
+    checksum: sha256:d373aab40c4c4c87c68fca9823bfedfa53c38034a0826d32fccdd4f088c94dc4
+    name: kernel-headers
+    evr: 6.14.3-300.fc42
+    sourcerpm: kernel-headers-6.14.3-300.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/libasan-15.1.1-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 508443
+    checksum: sha256:c349b278d312c2a4bf74f0a206e4c23e2b9181be4dce912dbfd97697ec16e899
+    name: libasan
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/libatomic-15.1.1-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 40448
+    checksum: sha256:4e22f82cbd22b15029c8cbfa76d8b4889bee840a6cab82c5a45cbf580278fd03
+    name: libatomic
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/libubsan-15.1.1-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 224473
+    checksum: sha256:cca8ccdedabd8805d846a4f79ed36a4a9d175b80ff5b82952c5ca8290140e15f
+    name: libubsan
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/libxcrypt-devel-4.4.38-7.fc42.aarch64.rpm
+    repoid: updates
+    size: 30043
+    checksum: sha256:b531b046783d1c3faae14b645b43043fa068428780a1da2a028a92aadb480aba
+    name: libxcrypt-devel
+    evr: 4.4.38-7.fc42
+    sourcerpm: libxcrypt-4.4.38-7.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/llvm-filesystem-20.1.6-1.fc42.aarch64.rpm
+    repoid: updates
+    size: 14614
+    checksum: sha256:f433ea2258d13b501e4e8dcd81dd4461f2846932899da5480cd5d910641c3224
+    name: llvm-filesystem
+    evr: 20.1.6-1.fc42
+    sourcerpm: llvm-20.1.6-1.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/l/llvm-libs-20.1.6-1.fc42.aarch64.rpm
+    repoid: updates
+    size: 32886544
+    checksum: sha256:ba0c6814d323fe164afcb477561684702e7662c50b7f26ae8860ab62194862c7
+    name: llvm-libs
+    evr: 20.1.6-1.fc42
+    sourcerpm: llvm-20.1.6-1.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/m/mpdecimal-4.0.1-1.fc42.aarch64.rpm
+    repoid: updates
+    size: 98052
+    checksum: sha256:e1b1550c383f71994d688be890d1c556aefca37fa85112d33d5be9ecd2083126
+    name: mpdecimal
+    evr: 4.0.1-1.fc42
+    sourcerpm: mpdecimal-4.0.1-1.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/p/python-unversioned-command-3.13.3-2.fc42.noarch.rpm
+    repoid: updates
+    size: 12156
+    checksum: sha256:547aad674b3c0ef9ca2e713f2fad613df97df0456dac0e3057c2086812d35dd4
+    name: python-unversioned-command
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/p/python3-3.13.3-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 30537
+    checksum: sha256:92085df75ff63b6765364faa0b6b361983e8d1acd7c152f9657dba5d1263867e
+    name: python3
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/p/python3-devel-3.13.3-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 414424
+    checksum: sha256:e221b0a1d01994ee9b7069e43ac9f0bac9f3a0e0293c72a7d17f10b4f00a9491
+    name: python3-devel
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/p/python3-libs-3.13.3-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 9473809
+    checksum: sha256:ee40316aa667f9bb4fc443c6d89a887a43fa5e2366ea2e082f76d3babae66a68
+    name: python3-libs
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/r/rust-1.87.0-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 28142719
+    checksum: sha256:15ed4798fea5fefe38d84492425b41e5191a973d697b6b15a395571b29b187b6
+    name: rust
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  - url: https://www.fedora.is/fedora/updates/42/Everything/aarch64/Packages/r/rust-std-static-1.87.0-2.fc42.aarch64.rpm
+    repoid: updates
+    size: 39428649
+    checksum: sha256:26a45941d5f224b1713ea10c89ecbad0df298bc8f7140f89a5bc591f935e7798
+    name: rust-std-static
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  source: []
+  module_metadata: []
+- arch: x86_64
+  packages:
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/b/binutils-2.44-3.fc42.x86_64.rpm
+    repoid: fedora
+    size: 6098686
+    checksum: sha256:9657d854cbe19334c9bd7b12ceca74f0690fa60f7a5135330dbdfcab8bf6631a
+    name: binutils
+    evr: 2.44-3.fc42
+    sourcerpm: binutils-2.44-3.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/e/expat-2.7.1-1.fc42.x86_64.rpm
+    repoid: fedora
+    size: 117827
+    checksum: sha256:c9e745fe28ce7935f6d885d0a1150550190610378ba81b5210f70a3de52de4a9
+    name: expat
+    evr: 2.7.1-1.fc42
+    sourcerpm: expat-2.7.1-1.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/j/jansson-2.14-2.fc42.x86_64.rpm
+    repoid: fedora
+    size: 46818
+    checksum: sha256:f7394c728043f0f995164b6b8e49bd1673e8dacfe9aed5d1beec0e3ae6a42177
+    name: jansson
+    evr: 2.14-2.fc42
+    sourcerpm: jansson-2.14-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libb2-0.98.1-13.fc42.x86_64.rpm
+    repoid: fedora
+    size: 25991
+    checksum: sha256:3f977d31f5ab2765ab06fcc44917806d85767ba37d0b2a05cd128b408aff5c95
+    name: libb2
+    evr: 0.98.1-13.fc42
+    sourcerpm: libb2-0.98.1-13.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libedit-3.1-55.20250104cvs.fc42.x86_64.rpm
+    repoid: fedora
+    size: 107827
+    checksum: sha256:f8bf05a34abc1eb7f4db8d1b9a5e590b56d941bb1db54d9487ba28219debbef1
+    name: libedit
+    evr: 3.1-55.20250104cvs.fc42
+    sourcerpm: libedit-3.1-55.20250104cvs.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libffi-devel-3.4.6-5.fc42.x86_64.rpm
+    repoid: fedora
+    size: 29471
+    checksum: sha256:ed0e1a4139f11819856c624de2294ff968a0137241cffbbb601395a75745b340
+    name: libffi-devel
+    evr: 3.4.6-5.fc42
+    sourcerpm: libffi-3.4.6-5.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libgit2-1.9.0-4.fc42.x86_64.rpm
+    repoid: fedora
+    size: 598720
+    checksum: sha256:af421d1e5318cd08cc2f1c629fdd7b9ccce608cc52a10d6f8e5892162c265a0f
+    name: libgit2
+    evr: 1.9.0-4.fc42
+    sourcerpm: libgit2-1.9.0-4.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libmpc-1.3.1-7.fc42.x86_64.rpm
+    repoid: fedora
+    size: 72605
+    checksum: sha256:13f4ae2bebbbe144714f4dc74bcd01dde9e667bff8cd133915f2170a04ad553d
+    name: libmpc
+    evr: 1.3.1-7.fc42
+    sourcerpm: libmpc-1.3.1-7.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libpkgconf-2.3.0-2.fc42.x86_64.rpm
+    repoid: fedora
+    size: 39289
+    checksum: sha256:6d61109d807a6f2f12f85b3d7e2732e11676316bc769abe6e3d4aa96a166353e
+    name: libpkgconf
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/libssh2-1.11.1-3.fc42.x86_64.rpm
+    repoid: fedora
+    size: 150746
+    checksum: sha256:aedddc0e04cce31a3b80d65aefda9c320123b3a21511ab9c5dd77fcf8e6aef64
+    name: libssh2
+    evr: 1.11.1-3.fc42
+    sourcerpm: libssh2-1.11.1-3.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/l/llhttp-9.2.1-5.fc42.x86_64.rpm
+    repoid: fedora
+    size: 33513
+    checksum: sha256:b2139c3c00186ffa97b95b17fd42cd821a5a5d174273ccaedb58a7faf15d0387
+    name: llhttp
+    evr: 9.2.1-5.fc42
+    sourcerpm: llhttp-9.2.1-5.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/m/make-4.4.1-10.fc42.x86_64.rpm
+    repoid: fedora
+    size: 601074
+    checksum: sha256:3c21a67124a9b07fedad49013ce7934c0ff6ffe44c7ee8513973533e8ee91da1
+    name: make
+    evr: 1:4.4.1-10.fc42
+    sourcerpm: make-4.4.1-10.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/m/mpfr-4.2.2-1.fc42.x86_64.rpm
+    repoid: fedora
+    size: 353591
+    checksum: sha256:d0559913dac8fe29ef627859c15e609de6de1122984b3f901400fc77ef7acd4e
+    name: mpfr
+    evr: 4.2.2-1.fc42
+    sourcerpm: mpfr-4.2.2-1.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/o/openssl-devel-3.2.4-3.fc42.x86_64.rpm
+    repoid: fedora
+    size: 2950185
+    checksum: sha256:031056bff71addd35f9ca8e3854773c00f37de5f79d9b66bd4cd7ea1aa6a70c5
+    name: openssl-devel
+    evr: 1:3.2.4-3.fc42
+    sourcerpm: openssl-3.2.4-3.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/p/pkgconf-2.3.0-2.fc42.x86_64.rpm
+    repoid: fedora
+    size: 45964
+    checksum: sha256:65169e8bfad20649ebd103c24255ad39e3e329e907cabf16ca1602411ffcb2a8
+    name: pkgconf
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/p/pkgconf-m4-2.3.0-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 14577
+    checksum: sha256:90496b0e2a7291473e34bd6e3044eb7b664944ffdccd1041896445196f3d32c4
+    name: pkgconf-m4
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/p/pkgconf-pkg-config-2.3.0-2.fc42.x86_64.rpm
+    repoid: fedora
+    size: 10163
+    checksum: sha256:9476e0b0fff3b34c4fca8579c116bcb2542443edb838cb2b434bde9c4b0d0fb3
+    name: pkgconf-pkg-config
+    evr: 2.3.0-2.fc42
+    sourcerpm: pkgconf-2.3.0-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/p/python-pip-wheel-24.3.1-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 1262714
+    checksum: sha256:6270a48e0b5b0fd8e5d434cba01fad2a454053d2d229b86acbff85a8a4abf093
+    name: python-pip-wheel
+    evr: 24.3.1-2.fc42
+    sourcerpm: python-pip-24.3.1-2.fc42.src.rpm
+  - url: http://ftp.cica.es/fedora/linux/releases/42/Everything/x86_64/os/Packages/p/python3-pip-24.3.1-2.fc42.noarch.rpm
+    repoid: fedora
+    size: 2854770
+    checksum: sha256:1ed6bd329ad7fb7c758ea93dc001180e66ed31faadc6645f121ba0d1b556b4ed
+    name: python3-pip
+    evr: 24.3.1-2.fc42
+    sourcerpm: python-pip-24.3.1-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/c/cargo-1.87.0-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 6901640
+    checksum: sha256:ab0844e77f93d6b76f417328cfc9ec76b39f28fe4e589c97579c5afe734b3035
+    name: cargo
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/c/cpp-15.1.1-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 13525524
+    checksum: sha256:4a503c8965071f6b92cce5c95e4d1f3b6b3781254e0e4456a180c149fde9c599
+    name: cpp
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/e/elfutils-debuginfod-client-0.193-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 48063
+    checksum: sha256:af8f25edf88e55b5b328c04031b65927801b62f383f0bd35c95a182dfd182874
+    name: elfutils-debuginfod-client
+    evr: 0.193-2.fc42
+    sourcerpm: elfutils-0.193-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/g/gcc-15.1.1-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 41306834
+    checksum: sha256:597e0fc19cf8da8c3ccf54d75b3d14e775214d995c80baa9b46bac19ca67f975
+    name: gcc
+    evr: 15.1.1-2.fc42
+    sourcerpm: gcc-15.1.1-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/g/glibc-devel-2.41-5.fc42.x86_64.rpm
+    repoid: updates
+    size: 655690
+    checksum: sha256:ee304e4b798680729c8cec26b400deb16f914ccb16b56044ac4b3428373e0fc7
+    name: glibc-devel
+    evr: 2.41-5.fc42
+    sourcerpm: glibc-2.41-5.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/k/kernel-headers-6.14.3-300.fc42.x86_64.rpm
+    repoid: updates
+    size: 1737848
+    checksum: sha256:d826ae2045937dc1085b3fd5b9d8934b17fc9b52124dfd96c2d5589e0e85ff69
+    name: kernel-headers
+    evr: 6.14.3-300.fc42
+    sourcerpm: kernel-headers-6.14.3-300.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/l/libxcrypt-devel-4.4.38-7.fc42.x86_64.rpm
+    repoid: updates
+    size: 30079
+    checksum: sha256:d1b2bbab6b209cce05584e55748f179dc380a947fa4ea1da4dc69c8f8dde0924
+    name: libxcrypt-devel
+    evr: 4.4.38-7.fc42
+    sourcerpm: libxcrypt-4.4.38-7.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/l/llvm-filesystem-20.1.6-1.fc42.x86_64.rpm
+    repoid: updates
+    size: 14658
+    checksum: sha256:b43a398ca3fbfd74a14b091b5a878035c942f59a1bb088bee1a3a8a9bc9da002
+    name: llvm-filesystem
+    evr: 20.1.6-1.fc42
+    sourcerpm: llvm-20.1.6-1.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/l/llvm-libs-20.1.6-1.fc42.x86_64.rpm
+    repoid: updates
+    size: 35141228
+    checksum: sha256:2f85d99fb5ae10721e5acd4bbab01f5b5d4445c14ad03bb646be00633cbc62dc
+    name: llvm-libs
+    evr: 20.1.6-1.fc42
+    sourcerpm: llvm-20.1.6-1.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/m/mpdecimal-4.0.1-1.fc42.x86_64.rpm
+    repoid: updates
+    size: 99388
+    checksum: sha256:815190835c7c3fc63a749a4b032cf48c9b3e2ce3f93062d57d7e6ff3cb7467fd
+    name: mpdecimal
+    evr: 4.0.1-1.fc42
+    sourcerpm: mpdecimal-4.0.1-1.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/p/python-unversioned-command-3.13.3-2.fc42.noarch.rpm
+    repoid: updates
+    size: 12156
+    checksum: sha256:547aad674b3c0ef9ca2e713f2fad613df97df0456dac0e3057c2086812d35dd4
+    name: python-unversioned-command
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/p/python3-3.13.3-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 30402
+    checksum: sha256:1d3c13458102b23a71fc0983a36d7b5b12a576b5ebc58401617aa248df85f823
+    name: python3
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/p/python3-devel-3.13.3-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 414408
+    checksum: sha256:a8314815c0541193f41e5bfbba401419a0d16c0217e22f8f08b88915658d2629
+    name: python3-devel
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/p/python3-libs-3.13.3-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 9611559
+    checksum: sha256:1a559ff8d904ccc76b0669abb26ac26dd1b0455ff4d17855abc8702de0ee7a2b
+    name: python3-libs
+    evr: 3.13.3-2.fc42
+    sourcerpm: python3.13-3.13.3-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/r/rust-1.87.0-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 30343723
+    checksum: sha256:77161cbb4a48df733709292789021bf06ef3ffdd920bd81e89d60ba4e4bbe825
+    name: rust
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  - url: https://eu.edge.kernel.org/fedora/updates/42/Everything/x86_64/Packages/r/rust-std-static-1.87.0-2.fc42.x86_64.rpm
+    repoid: updates
+    size: 40874743
+    checksum: sha256:8420eb7970103935cee795fbac1fdb54ff15e276bad57ef5c5e327f5e890d60f
+    name: rust-std-static
+    evr: 1.87.0-2.fc42
+    sourcerpm: rust-1.87.0-2.fc42.src.rpm
+  source: []
+  module_metadata: []
