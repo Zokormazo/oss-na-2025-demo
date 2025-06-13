@@ -1,0 +1,13 @@
+contentOrigin:
+  repofiles:
+    - ./fedora.repo
+packages:
+  - python3-pip
+  - python3-devel
+  - gcc
+  - cargo
+  - libffi-devel
+  - openssl-devel
+arches:
+  - x86_64
+  - aarch64
