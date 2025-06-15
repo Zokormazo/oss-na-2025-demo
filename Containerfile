@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora:42@sha256:68779a51b655f6bfeef08429fe31c33508f6a0d6beaf5660de094d49948a8e37
+FROM quay.io/fedora/fedora:43@sha256:1f43c494a04bfca202d2190625e0fb594ee3cb16fba3e8a9994afd7e8df6511a
 
 RUN dnf install -y python3 python3-pip
 RUN python3 -m pip install my_app
