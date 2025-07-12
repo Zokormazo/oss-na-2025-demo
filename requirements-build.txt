@@ -543,9 +543,9 @@ pathspec==0.12.1 \
     # via
     #   hatchling
     #   scikit-build-core
-pbs-installer==2025.6.12 \
-    --hash=sha256:438e75de131a2114ac5e86156fc51da7dadd6734844de329ad162cca63709297 \
-    --hash=sha256:ae2d3990848652dca699a680b00ea8e19b970cb6172967cb00539bfeed5a7465
+pbs-installer==2025.7.8 \
+    --hash=sha256:2d08a771713db9a61c3d83aeaa25bd82d2124d94d0b7cac44af47c680ae4e39e \
+    --hash=sha256:6e3c15ad0fb259017b73083b9cfa15d81b416bdee0dadd372c0b794fba478085
     # via
     #   pbs-installer
     #   poetry
