@@ -208,7 +208,7 @@ crashtest==0.4.1 \
     --hash=sha256:80d7b1f316ebfbd429f648076d6275c877ba30ba48979de4191714a75266f0ce \
     --hash=sha256:8d23eac5fa660409f57472e3851dab7ac18aba459a8d19cbbba86d3d5aecd2a5
     # via cleo
-cryptography==45.0.4 \
+cryptography==45.0.6 \
     --hash=sha256:0339a692de47084969500ee455e42c58e449461e0ec845a34a6a9b9bf7df7fb8 \
     --hash=sha256:03dbff8411206713185b8cebe31bc5c0eb544799a50c09035733716b386e61a4 \
     --hash=sha256:06509dc70dd71fa56eaa138336244e2fbaf2ac164fc9b5e66828fccfd2b680d6 \
