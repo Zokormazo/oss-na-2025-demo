@@ -1,4 +1,4 @@
-ARG EE_BASE_IMAGE="ghcr.io/ansible-community/community-ee-minimal:2.18.5-1"
+ARG EE_BASE_IMAGE="ghcr.io/ansible-community/community-ee-minimal:2.18.8-1"
 ARG PYCMD="/usr/bin/python3"
 ARG PKGMGR_PRESERVE_CACHE=""
 ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=""
