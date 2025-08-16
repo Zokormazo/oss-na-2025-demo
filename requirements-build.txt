@@ -295,7 +295,7 @@ dulwich==0.22.6 \
     --hash=sha256:fcf1894ac54023266a0cda78d3c997c56328164bdfcd300aab8201e8bcb7decd \
     --hash=sha256:ffa95d2d903f387f1a5206adb3d832013803a49e9b04c8749dd369f308f66824
     # via poetry
-fastjsonschema==2.21.1 \
+fastjsonschema==2.21.2 \
     --hash=sha256:794d4f0a58f848961ba16af7b9c85a3e88cd360df008c59aac6fc5ae9323b5d4 \
     --hash=sha256:c9e5b7e908310918cf494a434eeb31384dd84a98b57a30bcb1f535015b554667
     # via poetry
