@@ -698,7 +698,7 @@ requests==2.32.4 \
     #   cachecontrol
     #   poetry
     #   requests-toolbelt
-scikit-build-core==0.11.4 \
+scikit-build-core==0.11.6 \
     --hash=sha256:0d3e3463c332979a0c07340241b162d6cb0059a7a1bee6465c38ace49d441596 \
     --hash=sha256:5b194bbb04092ae327d294b23e4bbffb6181adce4259440a86c9cf6abb8eaa6c
     # via rapidfuzz
