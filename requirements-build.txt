@@ -549,7 +549,7 @@ pbs-installer==2025.6.12 \
     # via
     #   pbs-installer
     #   poetry
-pdm-backend==2.4.4 \
+pdm-backend==2.4.6 \
     --hash=sha256:87f85f65c208956a8adbcc01b8878ab29a97d0494cde56b733d961d4b5a48acf \
     --hash=sha256:f72551eeb319f74ca25856c24fb4026684eeb0dddd9df68482901ab0dc481258
     # via
