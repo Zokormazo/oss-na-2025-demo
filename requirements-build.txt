@@ -749,9 +749,9 @@ trove-classifiers==2025.5.9.12 \
     # via
     #   hatchling
     #   poetry
-types-psutil==7.0.0.20250601 \
-    --hash=sha256:0c372e2d1b6529938a080a6ba4a9358e3dfc8526d82fabf40c1ef9325e4ca52e \
-    --hash=sha256:71fe9c4477a7e3d4f1233862f0877af87bff057ff398f04f4e5c0ca60aded197
+types-psutil==7.2.1.20260116 \
+    --hash=sha256:4661be5d5d7acd5d8afb02a92d05160a6cbb2ce74723245b51f7ba7dfdb9f981 \
+    --hash=sha256:f516d2a71b28a4fd290f065cb30d7e7141ee605899aa592d8d4b80e45c9849be
     # via mypy
 types-setuptools==80.9.0.20250529 \
     --hash=sha256:00dfcedd73e333a430e10db096e4d46af93faf9314f832f13b6bbe3d6757e95f \
