@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "18 || 20"
+    "node": "18 || 20 || 24"
   },
   "scripts": {
     "build": "backstage-cli repo build --all",
